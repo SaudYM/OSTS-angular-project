@@ -3,6 +3,7 @@ interface OST {
   name: string;
   composer: string;
   src: string;
+  length: number;
 }
 @Component({
   selector: 'app-OST',
@@ -18,12 +19,20 @@ export class OSTComponent implements OnInit {
       name: 'the Last of Us',
       composer: 'Gustavo Santaolalla',
       src: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/acbe71cd-a3c9-46c3-b97d-b592c6f24b4d/de4c5mn-dcb40552-68cc-4eb0-8849-ed65180e9319.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FjYmU3MWNkLWEzYzktNDZjMy1iOTdkLWI1OTJjNmYyNGI0ZFwvZGU0YzVtbi1kY2I0MDU1Mi02OGNjLTRlYjAtODg0OS1lZDY1MTgwZTkzMTkuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.iLoM9u-ahJs6WWlX6_NjLHfYYf7D987lMIghtXzye1E',
+      length: 42,
     },
 
     {
       name: 'Read Dead redemptopn 2 ',
       composer: 'Woody Jackson',
-      src: 'https://i.discogs.com/WrLtfmkd8hnPkNfyD0douLsR7R0OftVsNzvgV3SFRcs/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0MDI2/ODQ4LTE1Njg2OTE2/MjMtOTIwMi5qcGVn.jpeg',
+      src: 'https://i.scdn.co/image/ab67616d0000b273f337a21d945f44e802a1eb1d',
+      length: 67,
+    },
+    {
+      name: 'god of war ',
+      composer: 'Bear McCreary',
+      src: 'https://i.scdn.co/image/ab67616d0000b2736c4f3ce9e20910138b533079',
+      length: 42,
     },
   ];
 

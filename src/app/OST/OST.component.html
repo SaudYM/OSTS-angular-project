@@ -1,25 +1,22 @@
-<h2> Best Gaming soundTracks</h2>
+<body>
 
-<!--Here  interpolation comes in handy becasue 
+    <h2> Best Gaming SoundTracks</h2>
+
+    <!--Here  interpolation comes in handy becasue 
     dynamic bindying always is true ~ 
 -->
-<!-- event binding   (  )  PROPIRTY BINDNIG  [  ] 
+    <!-- event binding   (  )  PROPIRTY BINDNIG  [  ] 
     two way binding is [(ngmodel)]-->
-
-<button (click)="isShowing=!isShowing">
-
-
-    <ng-container *ngIf="!isShowing">Show OSTs</ng-container>
-
-    <!-- this wont show in the console -->
-
-    <ng-container *ngIf="isShowing">Hide OSTs</ng-container>
+    <div class="button-div">
+        <button (click)="isShowing=!isShowing">
+            <ng-container *ngIf="!isShowing">Show OSTs</ng-container>
+            <!-- this wont show in the console -->
+            <ng-container *ngIf="isShowing">Hide OSTs</ng-container>
+        </button>
+    </div>
 
 
-</button>
-
-
-<!--[(ngModel)] is a way to implemnt a 
+    <!--[(ngModel)] is a way to implemnt a 
     funciton without the need to create
 its funciton 
 
@@ -29,25 +26,35 @@ its funciton
 -->
 
 
-<!--- DIRECTIVES : 
+    <!--- DIRECTIVES : 
 
 ngIf 
 
 -->
-<ul *ngIf="isShowing">
-    <ng-container *ngFor="let item of OSTS">
-        <li>
+    <div class="OST-container">
 
-            <!----interpolation-->
-            <!---Dynamic binding -->
-            <!-- pipe : | titlecase , check documination -->
-            {{item.name | titlecase}} by {{item.composer| titlecase}}
-            <img [src]="item.src" [alt]="item.src" width="200" />
-        </li>
-    </ng-container>
+        <ul *ngIf="isShowing" class="horizontal-list">
+            <ng-container *ngFor="let item of OSTS ; let i = index">
+                <li>
+                    <div class="OST">
+                        <!----interpolation-->
+                        <!---Dynamic binding -->
+                        <!-- pipe : | titlecase , check documination -->
+                        <div class="OST-info">
+                            <p> {{item.name | titlecase}}</p>
+                            <p>{{item.composer| titlecase}}</p>
+                            <p>Length : {{item.length* 1000| date:'mm:ss'}}hr</p>
+                        </div>
+                        <img [src]="item.src" [alt]="item.src" width="200" />
+                    </div>
+                </li>
+            </ng-container>
+        </ul>
+    </div>
 
 
 
 
-</ul>
-<br>
+
+
+</body>
