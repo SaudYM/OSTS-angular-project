@@ -1,18 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-interface OST {
-  name: string;
-  composer: string;
-  src: string;
-  length: number;
-}
+import { OST } from '../Types/Ost';
+
 @Component({
   selector: 'app-OST',
-  templateUrl: './OST.component.html',
-  styleUrls: ['./OST.component.css'],
+  templateUrl: './OSTs.component.html',
+  styleUrls: ['./OSTs.component.css'],
 })
-export class OSTComponent implements OnInit {
+export class OSTsComponent implements OnInit {
+  constructor() {}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
   OSTS: OST[] = [
     {
@@ -35,6 +31,9 @@ export class OSTComponent implements OnInit {
       length: 42,
     },
   ];
-
+  takeAlisten(ost: OST) {
+    console.log(ost);
+  }
+  aListen: OST[] = [];
   isShowing: boolean = true;
 }

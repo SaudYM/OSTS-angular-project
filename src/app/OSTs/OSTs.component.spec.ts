@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OSTComponent } from './OST.component';
+import { OSTsComponent } from './OSTs.component';
 
 describe('OSTComponent', () => {
-  let component: OSTComponent;
-  let fixture: ComponentFixture<OSTComponent>;
+  let component: OSTsComponent;
+  let fixture: ComponentFixture<OSTsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [OSTComponent]
+      declarations: [OSTsComponent],
     });
-    fixture = TestBed.createComponent(OSTComponent);
+    fixture = TestBed.createComponent(OSTsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

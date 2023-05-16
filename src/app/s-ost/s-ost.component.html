@@ -1,0 +1,14 @@
+<li>
+    <div class="OST">
+        <!----interpolation-->
+        <!---Dynamic binding -->
+        <!-- pipe : | titlecase , check documination -->
+        <div class="OST-info">
+            <p> {{ost.name | titlecase}}</p>
+            <p>{{ost.composer| titlecase}}</p>
+            <p>Length : {{ost.length* 1000| date:'mm:ss'}}hr</p>
+        </div>
+        <img [src]="ost.src" [alt]="ost.src" width="200" />
+        <button (click)="takeAlisten()">Take a listen</button>
+    </div>
+</li>

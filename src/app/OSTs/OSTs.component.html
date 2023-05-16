@@ -32,29 +32,11 @@ ngIf
 
 -->
     <div class="OST-container">
-
         <ul *ngIf="isShowing" class="horizontal-list">
-            <ng-container *ngFor="let item of OSTS ; let i = index">
-                <li>
-                    <div class="OST">
-                        <!----interpolation-->
-                        <!---Dynamic binding -->
-                        <!-- pipe : | titlecase , check documination -->
-                        <div class="OST-info">
-                            <p> {{item.name | titlecase}}</p>
-                            <p>{{item.composer| titlecase}}</p>
-                            <p>Length : {{item.length* 1000| date:'mm:ss'}}hr</p>
-                        </div>
-                        <img [src]="item.src" [alt]="item.src" width="200" />
-                    </div>
-                </li>
+            <ng-container *ngFor="let singleost of OSTS ; let i = index">
+                <app-s-ost (emitOst)='takeAlisten($event)' [ost]="singleost"></app-s-ost>
             </ng-container>
         </ul>
     </div>
-
-
-
-
-
 
 </body>

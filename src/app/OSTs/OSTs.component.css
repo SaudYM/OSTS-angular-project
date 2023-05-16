@@ -11,10 +11,20 @@ body {
 img {
   border-radius: 20%;
   padding: 2%;
+  cursor: pointer;
+}
+img:hover {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+  box-shadow: 0px 0px 30px 0px rgba(0, 255, 0, 0.67);
 }
 .button-div {
   text-align: center;
 }
+
 ul {
   list-style-type: none;
 }
@@ -40,6 +50,7 @@ button {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   color: white;
   text-align: center;
+  margin: 5px;
 }
 
 .OST-info p {
@@ -50,7 +61,7 @@ button {
 }
 .horizontal-list {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   list-style: none;
   text-align: center;
 }
