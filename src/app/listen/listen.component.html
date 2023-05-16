@@ -1,0 +1,14 @@
+<h1>Listning Queue</h1>
+<div *ngIf="getlisten().length > 0 ">
+
+    <div>
+        <ng-container *ngFor="let item of getlisten()">
+
+            <p>{{item.name}}</p>
+
+
+        </ng-container>
+    </div>
+
+</div>
+<div *ngIf="getlisten().length == 0 "> NO OSTS in queue </div>

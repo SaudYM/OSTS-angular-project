@@ -2,11 +2,6 @@
 
     <h2> Best Gaming SoundTracks</h2>
 
-    <!--Here  interpolation comes in handy becasue 
-    dynamic bindying always is true ~ 
--->
-    <!-- event binding   (  )  PROPIRTY BINDNIG  [  ] 
-    two way binding is [(ngmodel)]-->
     <div class="button-div">
         <button (click)="isShowing=!isShowing">
             <ng-container *ngIf="!isShowing">Show OSTs</ng-container>
@@ -16,25 +11,10 @@
     </div>
 
 
-    <!--[(ngModel)] is a way to implemnt a 
-    funciton without the need to create
-its funciton 
-
-<input type="text" [(ngModel)]="OSTname" />
-
-<p>{{OSTname}}</p>
--->
-
-
-    <!--- DIRECTIVES : 
-
-ngIf 
-
--->
     <div class="OST-container">
         <ul *ngIf="isShowing" class="horizontal-list">
             <ng-container *ngFor="let singleost of OSTS ; let i = index">
-                <app-s-ost (emitOst)='takeAlisten($event)' [ost]="singleost"></app-s-ost>
+                <app-s-ost [ost]="singleost"></app-s-ost>
             </ng-container>
         </ul>
     </div>

@@ -43,6 +43,8 @@ button {
   font-size: 16px;
   margin: 4px 2px;
   border-radius: 5px;
+  cursor: pointer;
+
 }
 .OST-info {
   background-color: #317c50;
