@@ -1,22 +1,29 @@
-<body>
+<div class="text-center">
 
-    <h2> Best Gaming SoundTracks</h2>
+    <h1 class=" mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span
+            class="text-transparent bg-clip-text bg-gradient-to-r to-black from-green-500"> Best
+            Gaming</span> SoundTracks</h1>
 
-    <div class="button-div">
-        <button (click)="isShowing=!isShowing">
-            <ng-container *ngIf="!isShowing">Show OSTs</ng-container>
-            <!-- this wont show in the console -->
-            <ng-container *ngIf="isShowing">Hide OSTs</ng-container>
-        </button>
-    </div>
+</div>
+
+<div class="text-center">
+    <button (click)="isShowing=!isShowing"
+        class="rounded-lg px-4 py-2 bg-green-700 text-green-100 hover:bg-green-800 duration-300">
+        <ng-container *ngIf="!isShowing">Show OSTs</ng-container>
+        <!-- this wont show in the console -->
+        <ng-container *ngIf="isShowing">Hide OSTs</ng-container>
+    </button>
+</div>
 
 
-    <div class="OST-container">
-        <ul *ngIf="isShowing" class="horizontal-list">
-            <ng-container *ngFor="let singleost of OSTS ; let i = index">
-                <app-s-ost [ost]="singleost"></app-s-ost>
-            </ng-container>
-        </ul>
-    </div>
+<div class="">
 
-</body>
+
+    <ul *ngIf="isShowing" class='flex flex-wrap justify-center'>
+        <ng-container *ngFor="let singleost of OSTS ; let i = index">
+            <app-s-ost class=" text-center" [ost]="singleost"></app-s-ost>
+        </ng-container>
+    </ul>
+
+
+</div>

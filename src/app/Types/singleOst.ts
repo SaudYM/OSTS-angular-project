@@ -3,4 +3,5 @@ export interface OST {
   composer: string;
   src: string;
   length: number;
+  vedio_id:string;
 }

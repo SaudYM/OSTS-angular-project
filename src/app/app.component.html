@@ -1,6 +1,17 @@
-<body>
+<nav class="flex justify-between p-4 bg-green-900 text-white">
 
-    <h1>Games OSTS</h1>
-    <app-OST></app-OST>
-    <app-listen></app-listen>
-</body>
+    <div>
+        <a routerLink="">OSTs Hall</a>
+    </div>
+
+    <div>
+        <button routerLink="/ost"> My OSTs</button>
+    </div>
+
+</nav>
+
+<div class="p-5">
+
+    <router-outlet></router-outlet>
+
+</div>

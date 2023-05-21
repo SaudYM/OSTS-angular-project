@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ListeningService } from '../services/listening-service.service';
-
 @Component({
   selector: 'app-listen',
   templateUrl: './listen.component.html',

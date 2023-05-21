@@ -1,19 +1,15 @@
-<li>
-    <div class="OST">
-        <!----interpolation-->
-        <!---Dynamic binding -->
-        <!-- pipe : | titlecase , check documination -->
-        <div class="OST-info">
-            <p> {{ost.name | titlecase}}</p>
-            <p>{{ost.composer| titlecase}}</p>
-            <p>Length : {{ost.length* 1000| date:'mm:ss'}}hr</p>
-        </div>
-        <img [src]="ost.src" [alt]="ost.src" width="200" />
+<li class='flex border rounded-xl h-auto m-3'>
+    <div class='m-auto'>
+        <img [src]="ost.src" [alt]="ost.src" width="200" class="rounded-md m-auto " />
+        <p class="text-sm m-5"> {{ost.name | titlecase}}</p>
+        <p class="my-4">{{ost.composer| titlecase}}</p>
+        <p class="my-4">Length : {{ost.length* 1000| date:'mm:ss'}}hr</p>
 
-        <button *ngIf="!isInQueue" (click)="addToqueue()">Add to Queue</button>
-        <button *ngIf="isInQueue" (click)="reomveOST()">Remove from Queue</button>
-
-
-
+        <button routerLink= "/preview/{{ost.vedio_id}}" class="bg-green-400 rounded p-4 m-6">
+            Have a Preview
+        </button>
+        <button class="bg-green-400 rounded p-4 m-6" *ngIf="!isInQueue" (click)="addToqueue()">Add to Library</button>
+        <button class=" text-md bg-green-400 rounded p-3 m-6" *ngIf="isInQueue" (click)="reomveOST()">Remove from
+            Library</button>
     </div>
 </li>
